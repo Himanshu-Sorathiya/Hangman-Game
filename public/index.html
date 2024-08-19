@@ -4,10 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/style.css" />
+    <script src="../dist/riddles.js" defer></script>
     <script src="../dist/script.js" defer></script>
     <title>Hangman Game</title>
   </head>
   <body>
+    <div class="wrapper">
+      <div class="game-container">
+        <div class="hangman-container">
+          <div class="hangman-image-wrapper">
+            <img src="../assets/images/hangman-0.svg" alt="" />
+          </div>
 
+          <div class="hangman-title">HANGMAN GAME</div>
+        </div>
+
+        <div class="game-controls-container">
+          <div class="answer-area">
+            <span>_</span> <span>_</span> <span>_</span> <span>_</span>
+            <span>_</span> <span>_</span> <span>_</span> <span>_</span>
+            <span>_</span>
+          </div>
+
+          <div class="puzzle-area">
+            Hint: <span class="riddle">An exciting or daring experience.</span>
+          </div>
+
+          <div class="counter-area">
+            Incorrect guesses:
+            <span class="counting"><span class="counter">0</span> / 6</span>
+          </div>
+
+          <div class="keyboard-area">
+            <button class="char-button">A</button>
+            <button class="char-button">B</button>
+            <button class="char-button">C</button>
+            <button class="char-button">D</button>
+            <button class="char-button">E</button>
+            <button class="char-button">F</button>
+            <button class="char-button">G</button>
+            <button class="char-button">H</button>
+            <button class="char-button">I</button>
+            <button class="char-button">J</button>
+            <button class="char-button">K</button>
+            <button class="char-button">L</button>
+            <button class="char-button">M</button>
+            <button class="char-button">N</button>
+            <button class="char-button">O</button>
+            <button class="char-button">P</button>
+            <button class="char-button">Q</button>
+            <button class="char-button">R</button>
+            <button class="char-button">S</button>
+            <button class="char-button">T</button>
+            <button class="char-button">U</button>
+            <button class="char-button">V</button>
+            <button class="char-button">W</button>
+            <button class="char-button">X</button>
+            <button class="char-button">Y</button>
+            <button class="char-button">Z</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <div class="victory">
+          <img src="../assets/images/victory.gif" class="victory-gif" alt="" />
+          <h2 class="victory-title">Congrats!</h2>
+          <p class="victory-paragraph">
+            You found the word:
+            <span class="answer">answer</span>
+          </p>
+          <button class="btn">Play Again</button>
+        </div>
+
+        <div class="lose">
+          <img src="../assets/images/lost.gif" class="lose-gif" alt="" />
+          <h2 class="lose-title">Game Over!</h2>
+          <p class="lose-paragraph">
+            The correct word was:
+            <span class="answer">answer</span>
+          </p>
+          <button class="btn">Play Again</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

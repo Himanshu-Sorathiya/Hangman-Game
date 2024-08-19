@@ -1,3 +1,89 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply relative flex h-screen w-screen items-center justify-center bg-violet-600 p-12 md:p-0;
+  }
+
+  .game-container {
+    @apply flex max-w-3xl flex-col gap-12 rounded-lg bg-white p-8 md:flex-row;
+  }
+
+  .hangman-container {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .hangman-image-wrapper {
+    @apply h-64 w-64;
+  }
+
+  .hangman-title {
+    @apply mt-4 text-2xl font-bold;
+  }
+
+  .game-controls-container {
+    @apply flex flex-col items-center justify-center gap-6 text-lg font-semibold;
+  }
+
+  .answer-area {
+    @apply flex flex-wrap gap-3 text-5xl;
+  }
+
+  .puzzle-area {
+    @apply text-center font-normal;
+  }
+
+  .riddle {
+    @apply font-semibold;
+  }
+
+  .counting {
+    @apply text-red-500;
+  }
+
+  .keyboard-area {
+    @apply flex flex-wrap items-center justify-center gap-1;
+  }
+
+  .char-button {
+    @apply h-8 w-8 rounded-md border-none bg-violet-600 uppercase text-white shadow-sm outline-none hover:bg-violet-500;
+  }
+
+  .char-button:disabled {
+    @apply cursor-default bg-violet-600/70;
+  }
+
+  .overlay {
+    @apply absolute left-0 top-0 hidden h-screen w-screen items-center justify-center bg-black/50;
+  }
+
+  .victory,
+  .lose {
+    @apply hidden flex-col items-center justify-center gap-4 rounded-lg bg-white px-12 py-8;
+  }
+
+  .victory-gif,
+  .lose-gif {
+    @apply h-32 w-32;
+  }
+
+  .victory-title,
+  .lose-title {
+    @apply text-3xl font-bold;
+  }
+
+  .victory-paragraph,
+  .lose-paragraph {
+    @apply text-lg font-semibold;
+  }
+
+  .answer {
+    @apply text-violet-600;
+  }
+
+  .btn {
+    @apply rounded-md bg-violet-600 px-4 py-2 text-white hover:bg-violet-600/70;
+  }
+}
